@@ -12,7 +12,7 @@ export const siteConfig = {
     "https://chat.whatsapp.com/LOLQwz5hqgzAxfpKupaoXi?s=cl&p=a&mlu=4&ilr=4",
 
   // Meta Ads / Analytics
-  metaPixelId: process.env.NEXT_PUBLIC_META_PIXEL_ID || "",
+  metaPixelId: process.env.NEXT_PUBLIC_META_PIXEL_ID || "1160559719946128",
 
   // Dados da Empresa / Controlador (LGPD)
   company: {
