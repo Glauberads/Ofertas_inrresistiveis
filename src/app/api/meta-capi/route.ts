@@ -1,10 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import crypto from "crypto";
+import { siteConfig } from "@/config/site";
 
 export async function POST(req: NextRequest) {
   try {
     const accessToken = process.env.META_CAPI_ACCESS_TOKEN;
-    const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID;
+    const pixelId =
+      process.env.NEXT_PUBLIC_META_PIXEL_ID || siteConfig.metaPixelId || "1160559719946128";
     const testCode = process.env.META_CAPI_TEST_EVENT_CODE;
 
     // Se o token CAPI ou Pixel ID não estiverem configurados no ambiente, encerra com segurança
